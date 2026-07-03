@@ -17,13 +17,22 @@
 
 int apply_damage();
 int scene();
-
+int scene2();
 
 int main(){
     srand(time(NULL));
     int marine_wounds = 10;
     marine_wounds = marine_wounds - scene(); // variable does not use () if you are calling the function then use ()
-    printf("%d points worth of life has been taken from you captain. I will summon the apothecary.\n", marine_wounds);
+    printf("I will summon the apothecary brother.\n", marine_wounds);
+    marine_wounds = marine_wounds - scene2();
+    if(marine_wounds <= 0 ){
+        sleep(2);
+        printf("You died");
+    }
+    else{
+        sleep(2);
+    printf("You have reached the Chapter master. \n");
+    }
     return 0;
 }
 
@@ -52,7 +61,15 @@ int scene(){
     }
     printf("AArrahah, My lord, you're attacked by a tyrranid and are injured!\n");
     int damage_taken = apply_damage();
-    return damage_taken;
+    return damage_taken; }
+
+int scene2(){
+    sleep(2);
+    printf("we carry on my Lord. CARNIFEX!!!\n");
+    int damage_taken2 = apply_damage();
+    return damage_taken2; 
 }
+
+
 
 
