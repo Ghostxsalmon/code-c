@@ -10,7 +10,29 @@ int ratio();
 
 int main(void){
     int choice = ratio();
-    printf("you have chosen %d", choice);
+    
+    if (choice == 1){
+        printf("You have chosen sin\n");
+    }
+    else if (choice == 2){
+        printf("You have chosen cos\n");
+    }
+    else {
+        printf("You have chosen tan\n");
+    }
+
+
+
+
+    if (choice == 1) {
+        printf ("%f\n", opposite() / hypotenuse());  
+    }
+    else if (choice == 2) {
+        printf ("%f\n", adjacent() / hypotenuse());
+    }
+    else {
+        printf ("%f\n", opposite() / adjacent() );
+    }
 
     return 0;
 }
@@ -20,5 +42,26 @@ int ratio(){ // char might seem more obvious but it is harder to manage memory s
     printf("What are you atttempting?\n\n 1 for sin\n 2 for cos\n 3 for tan\n\n");
     scanf("%d", &trig);
     return trig;
+}
+
+float hypotenuse(){
+    float h;
+    printf("what is the Hypotenuse?\n");
+    scanf("%f", &h);
+    return h;
+}
+
+float adjacent(){
+    float a;
+    printf("what is the adjacent?\n");
+    scanf("%f", &a);
+    return a;
+}
+
+float opposite(){
+    float o;
+    printf("what is the opposite?\n");
+    scanf("%f", &o);
+    return o;
 }
 
