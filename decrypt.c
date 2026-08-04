@@ -1,8 +1,8 @@
 
-
 // Encyption Warhammer themed
 
     #include <stdio.h>
+    #include <unistd.h>
     
    int gate();
    void receive();
@@ -10,9 +10,10 @@
    int main(void){
 
       if (gate() == 0){
-         
+         return 0;
       }
 
+      receive();
 
 
     return 0;
@@ -43,7 +44,7 @@
 
 // Get a message
 void receive(){
-    printf("Incoming encrypted transmission detected.");
+    printf("Incoming encrypted transmission detected. \n");
 
     int a = 1;
     int b = 2;
@@ -58,5 +59,51 @@ void receive(){
     printf("%d - ", output_a);
     printf("%d\n", output_l);
 
-}
 
+    sleep(2);
+
+    int u = 21;
+    int n = 14;
+    int d = 4;
+    int e = 5;
+    int r = 18;
+
+    int output_u = u * 3 - 10;
+    int output_n = n * 3 - 10;
+    int output_d = d * 3 - 10;
+    int output_e = e * 3 - 10;
+    int output_r = r * 3 - 10;
+
+    printf("%d - ", output_u);
+    printf("%d - ", output_n);
+    printf("%d - ", output_d);
+    printf("%d - ", output_e);
+    printf("%d\n", output_r);
+
+
+    sleep(2);
+
+    int s = 19;
+    int i = 9;
+    int g = 7;
+    int e2 = 5;
+
+    int output_s = s + 4 * 5;
+    int output_e2 = e2 + 4 * 5;
+    int output_i = i + 4 * 5;
+    int output_g = g + 4 * 5;
+
+    printf("%d - ", output_s);
+    printf("%d - ", output_e2);
+    printf("%d - ", output_i);
+    printf("%d - ", output_g);
+    printf("%d\n", output_e2);
+
+
+    sleep(2);
+
+    printf("end of transmission \n");
+
+
+}
+;
