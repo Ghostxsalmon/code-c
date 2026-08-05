@@ -3,9 +3,11 @@
 
     #include <stdio.h>
     #include <unistd.h>
+    #include <string.h>
     
    int gate();
    void receive();
+   int verify();
 
    int main(void){
 
@@ -14,7 +16,7 @@
       }
 
       receive();
-
+      verify();
 
     return 0;
    }
@@ -106,4 +108,22 @@ void receive(){
 
 
 }
-;
+
+
+int verify(){
+    
+    char answer[50];
+    
+    printf("Decryption confirmation required...\n Logic Engine expected output structure, x_x_x_x_x\n underscores instead of spaces, all lower case, no further symbols required.\n");
+    
+    scanf("%s", answer);
+    
+    if (strcmp(answer, "baal_under_seige") == 0) {
+        printf("match\n Assignment granted, the emperor protects\n");
+        return 1;
+    } else {
+        printf("no match\n");
+        return 0;
+    }
+    
+}
